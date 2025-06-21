@@ -10,7 +10,7 @@ export default function About() {
         y: 0, 
         x: 0, 
         scale: 1 
-    };    return (        <section className="py-20 px-8 bg-[#0a0a0d] relative overflow-hidden">
+    };    return (        <section id="about-me" className="py-20 px-8 bg-[#0a0a0d] relative overflow-hidden">
             {/* Background Pattern - matching pattern style from Hero but on dark background */}
             <div className="absolute inset-0 opacity-5 pattern-dots pattern-gray-300 pattern-bg-transparent pattern-size-2 z-0"></div>
             
