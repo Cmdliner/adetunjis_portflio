@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import { Header } from "./Header";
+import Header from "./Header";
 import { motion } from "motion/react";
 
 export default function Hero() {

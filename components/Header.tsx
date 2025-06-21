@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export async function Header() {
+export default function Header() {
     return (        <header className="bg-white/20 backdrop-blur-md flex fixed w-[99.7vw] md:w-[80vw] top-0 md:left-[10vw] md:right-[10vw] p-4 justify-between border border-white/20 shadow-lg z-50 rounded-md my-2 mx-auto">
             <div className="text-2xl font-semibold">
                 Adetunji Adeniran
