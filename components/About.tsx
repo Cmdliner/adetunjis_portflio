@@ -1,7 +1,128 @@
+import { GraduationCap, Calendar, MapPin, Briefcase, Mail } from "lucide-react";
+import { educationData, skills } from "./lib/utils";
+
 export default function About() {
     return (
-        <section className="p-8 bg-[#1b0b05] text-shadow-white">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aliquid deleniti veniam amet nemo quae voluptatibus soluta ratione reprehenderit cumque fuga, harum ducimus, aspernatur, aliquam voluptas sint minus vitae obcaecati mollitia? Maxime quis hic nostrum autem vel quod magni, porro illo iusto non officiis reiciendis alias incidunt quae, delectus sunt ullam et quaerat magnam! Minima deserunt atque aspernatur dolore facilis, in odit eius expedita ratione quidem necessitatibus dicta nostrum, eos accusantium rem voluptatibus? Quidem aut earum nihil dolorum voluptates reiciendis accusantium blanditiis! Suscipit nisi dignissimos, quae vel blanditiis doloribus accusantium est soluta debitis tenetur corrupti. Et fugit deleniti, quibusdam itaque, quae vero quis doloremque incidunt totam veniam rem reprehenderit, soluta iusto perspiciatis esse ut in doloribus enim. Quo, maxime magnam, iure nemo facilis sequi ex perferendis aliquid corporis tempore, consequuntur animi officiis porro ducimus voluptatem eaque consectetur laborum consequatur aperiam? Quo neque tempora modi error quam doloremque accusamus molestiae, non, velit totam explicabo officia aspernatur repellendus fuga pariatur reprehenderit aliquid veritatis ducimus sequi perferendis soluta! Provident nemo cumque tenetur porro assumenda expedita iste officia rerum, enim ea accusantium vitae obcaecati autem quo a quam quos ratione officiis nam exercitationem architecto alias omnis. Eveniet adipisci ipsam odit aut, omnis vero quidem, itaque quasi quis, dicta voluptas mollitia perspiciatis officiis sed eligendi fuga inventore veniam obcaecati maiores ducimus reprehenderit consectetur. Rem quia laboriosam dolor nam tenetur, natus hic ut eligendi temporibus commodi, quos, mollitia voluptate voluptatum? Dolorum, suscipit facere ipsa reiciendis nesciunt officia? Omnis doloremque rem dicta, nemo, quasi saepe atque necessitatibus culpa et est alias qui harum amet sapiente, non sunt reprehenderit blanditiis exercitationem error consectetur aliquam! Saepe consequatur maxime atque nemo obcaecati. Cupiditate ea quo repudiandae assumenda, accusamus rem magni facere quos cum? Ab ipsum tenetur mollitia laborum laudantium dolore quidem veniam deserunt, consectetur totam qui placeat! Reiciendis ipsum, a, quis ab voluptas unde magnam sequi nam qui blanditiis laborum sed quibusdam dignissimos ipsam inventore atque minima maiores quam. Necessitatibus labore quos mollitia quam corrupti esse fugiat sed dolores pariatur, veritatis, magni quis. Nostrum accusamus tempore id voluptate quia accusantium sint et atque. Commodi amet quibusdam, voluptates sed magni eaque quisquam ad soluta, provident deleniti, quo laboriosam iusto! Ipsam laudantium repellendus iste dolor vero quod, quis officia corporis porro error, praesentium itaque? Cum minus vel inventore tempora illum eaque minima porro vero itaque. Ea illum unde consequatur. Earum, ipsum? Ad possimus natus libero sint nisi dolorem dolorum porro ea rem non nesciunt aspernatur eius eaque quo autem numquam soluta reprehenderit ipsam, voluptas doloremque voluptate saepe! Assumenda minima sint ab laboriosam id perferendis eveniet, fugiat esse aspernatur, sequi inventore ea? Officia optio rerum autem rem dolorum in recusandae et qui magni! Dignissimos error beatae molestiae quis sit quaerat quia. Neque, harum ex? Laborum, fugiat! Voluptas voluptatum inventore natus eveniet sunt alias rem praesentium ipsa cumque. Ullam quam dolorum nemo dolore, quis porro fuga deleniti animi! Rerum facere reiciendis est a qui enim necessitatibus tempora numquam nam perspiciatis exercitationem deserunt, error, et sunt voluptas omnis excepturi laborum odio. Delectus iste atque esse?=</h2>
+
+        <section className="p-8 bg-[#1b0b05] relative overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-5">
+                <div className="absolute inset-0" style={{
+                    backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+                    backgroundSize: '40px 40px'
+                }}></div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-6 relative">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl font-bold text-amber-50 mb-4">Education & Experience</h2>
+                    <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div className="grid lg:grid-cols-2 gap-16 items-start">
+                    {/* Left Column - Education Timeline */}
+                    <div className="space-y-8">
+                        <h3 className="text-2xl font-semibold text-amber-100 mb-8 flex items-center">
+                            <GraduationCap className="mr-3 text-yellow-600" size={28} />
+                            Educational Journey
+                        </h3>
+
+                        <div className="relative">
+                            {/* Timeline Line */}
+                            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-yellow-600/30"></div>
+
+                            {educationData.map((edu, index) => (
+                                <div key={index} className="relative flex items-start mb-12 group">
+                                    {/* Timeline Dot */}
+                                    <div className="absolute left-3 w-6 h-6 bg-yellow-600 rounded-full border-4 border-amber-950 group-hover:scale-110 transition-transform duration-300 z-10"></div>
+
+                                    {/* Content */}
+                                    <div className="ml-16 bg-amber-900/50 backdrop-blur-sm rounded-xl p-6 border border-amber-800/30 hover:bg-amber-900/70 transition-all duration-300 group-hover:transform group-hover:scale-105">
+                                        <div className="flex items-center text-yellow-600 text-sm font-medium mb-2">
+                                            <Calendar size={16} className="mr-2" />
+                                            {edu.year}
+                                        </div>
+                                        <h4 className="text-xl font-semibold text-amber-50 mb-2">{edu.institution}</h4>
+                                        <p className="text-amber-200 font-medium mb-2">{edu.degree}</p>
+                                        <div className="flex items-center text-amber-300 text-sm mb-3">
+                                            <MapPin size={14} className="mr-2" />
+                                            {edu.location}
+                                        </div>
+                                        <p className="text-amber-100/80 text-sm leading-relaxed">{edu.description}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Right Column - Skills & Specialization */}
+                    <div className="space-y-8">
+                        <h3 className="text-2xl font-semibold text-amber-100 mb-8 flex items-center">
+                            <Briefcase className="mr-3 text-yellow-600" size={28} />
+                            Expertise & Skills
+                        </h3>
+
+                        {/* Specialization Card */}
+                        <div className="bg-gradient-to-br from-amber-900/60 to-amber-800/40 backdrop-blur-sm rounded-2xl p-8 border border-amber-700/30 hover:border-yellow-600/50 transition-colors duration-300">
+                            <div className="text-center mb-8">
+                                <div className="w-20 h-20 bg-yellow-600/20 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-yellow-600/30">
+                                    <Mail size={32} className="text-yellow-600" />
+                                </div>
+                                <h4 className="text-2xl font-bold text-amber-50 mb-3">Email Marketing Specialist</h4>
+                                <p className="text-amber-200 leading-relaxed">
+                                    Crafting data-driven email campaigns that convert prospects into loyal customers.
+                                    Specializing in segmentation, automation, and performance optimization.
+                                </p>
+                            </div>
+
+                            {/* Key Stats */}
+                            <div className="grid grid-cols-3 gap-4 mb-8">
+                                <div className="text-center p-4 bg-amber-800/30 rounded-lg">
+                                    <div className="text-2xl font-bold text-yellow-600">95%</div>
+                                    <div className="text-xs text-amber-300">Delivery Rate</div>
+                                </div>
+                                <div className="text-center p-4 bg-amber-800/30 rounded-lg">
+                                    <div className="text-2xl font-bold text-yellow-600">28%</div>
+                                    <div className="text-xs text-amber-300">Open Rate</div>
+                                </div>
+                                <div className="text-center p-4 bg-amber-800/30 rounded-lg">
+                                    <div className="text-2xl font-bold text-yellow-600">6.8%</div>
+                                    <div className="text-xs text-amber-300">Click Rate</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Skills Progress */}
+                        <div className="space-y-6">
+                            <h4 className="text-xl font-semibold text-amber-100 mb-6">Core Competencies</h4>
+                            {skills.map((skill, index) => (
+                                <div key={index} className="bg-amber-900/40 backdrop-blur-sm rounded-lg p-6 border border-amber-800/20 hover:border-yellow-600/30 transition-colors duration-300">
+                                    <div className="flex items-center justify-between mb-3">
+                                        <div className="flex items-center">
+                                            <skill.icon size={20} className="text-yellow-600 mr-3" />
+                                            <span className="text-amber-100 font-medium">{skill.name}</span>
+                                        </div>
+                                        <span className="text-yellow-600 font-semibold">{skill.level}%</span>
+                                    </div>
+                                    <div className="bg-amber-800/30 rounded-full h-2 overflow-hidden">
+                                        <div
+                                            className="bg-gradient-to-r from-yellow-600 to-yellow-500 h-full rounded-full transition-all duration-1000 ease-out"
+                                            style={{ width: `${skill.level}%` }}
+                                        ></div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* CTA Button */}
+                        <div className="mt-8">
+                            <button className="w-full bg-gradient-to-r from-yellow-600 to-yellow-500 text-amber-950 font-semibold py-4 px-8 rounded-xl hover:from-yellow-500 hover:to-yellow-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                View Portfolio Projects
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     );
 }
