@@ -15,7 +15,7 @@ export default function Footer() {
     return (
         <footer className="relative bg-white overflow-hidden">
             {/* Background pattern - same as Hero section */}
-            <div className="absolute inset-0 opacity-5 pattern-dots pattern-gray-800 pattern-bg-white pattern-size-2 z-0"></div>
+
             
             {/* Top wave divider */}
             <div className="absolute top-0 left-0 right-0 h-16 z-10">

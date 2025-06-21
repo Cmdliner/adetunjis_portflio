@@ -7,7 +7,7 @@ export default function Projects() {
     return (
         <section id="projects" className="relative py-24 bg-white overflow-hidden">
             {/* Background pattern */}
-            <div className="absolute inset-0 opacity-5 pattern-dots pattern-gray-800 pattern-bg-white pattern-size-2 z-0"></div>
+
             
             {/* Top wave divider - connects to dark About section */}
             <div className="absolute top-0 left-0 right-0 h-16 z-10">

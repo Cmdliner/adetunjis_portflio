@@ -12,7 +12,7 @@ export default function About() {
         scale: 1 
     };    return (        <section id="about-me" className="py-20 px-8 bg-[#0a0a0d] relative overflow-hidden">
             {/* Background Pattern - matching pattern style from Hero but on dark background */}
-            <div className="absolute inset-0 opacity-5 pattern-dots pattern-gray-300 pattern-bg-transparent pattern-size-2 z-0"></div>
+
             
             {/* Subtle color overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#080810]/30 via-[#0a0a12]/60 to-[#070710]/80 opacity-70"></div>

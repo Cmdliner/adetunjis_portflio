@@ -16,7 +16,7 @@ export default function Hero() {
             <Header />
             
             {/* Background subtle pattern */}
-            <div className="absolute inset-0 opacity-5 pattern-dots pattern-gray-800 pattern-bg-white pattern-size-2 z-0"></div>
+
 
             <div className="container mx-auto px-6 pt-24 pb-12 relative z-10">
                 <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">                    {/* Left column - Text content */}

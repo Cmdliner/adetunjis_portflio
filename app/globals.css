@@ -8,15 +8,7 @@
   --header-text: #9c9c9c;
 }
 
-/* Pattern styles */
-.pattern-dots {
-  background-image: radial-gradient(currentColor 2px, transparent 2px);
-  background-size: calc(10 * 2px) calc(10 * 2px);
-}
-
-.pattern-size-2 {
-  background-size: 20px 20px;
-}
+/* Clean background styling */
 
 /* Custom styles */
 body {
