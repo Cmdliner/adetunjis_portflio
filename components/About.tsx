@@ -1,6 +1,6 @@
 "use client"
 import { GraduationCap, Calendar, MapPin, Briefcase, Mail } from "lucide-react";
-import { educationData, skills } from "./lib/utils";
+import { educationData, skills } from "../lib/utils";
 import { motion } from "motion/react";
 
 export default function About() {
@@ -10,9 +10,9 @@ export default function About() {
         y: 0, 
         x: 0, 
         scale: 1 
-    };    return (        <section id="about-me" className="py-20 px-8 bg-[#0a0a0d] relative overflow-hidden">
-            {/* Background Pattern - matching pattern style from Hero but on dark background */}
-
+    };    
+    return (        
+    <section id="about-me" className="py-20 px-8 bg-[#0a0a0d] relative overflow-hidden">
             
             {/* Subtle color overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#080810]/30 via-[#0a0a12]/60 to-[#070710]/80 opacity-70"></div>

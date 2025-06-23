@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, Linkedin, Twitter, Instagram, Github, ArrowUp } from "lucide-react";
+import { Mail, Phone, Linkedin, Twitter, PhoneIcon, Instagram, ArrowUp, PhoneCallIcon } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function Footer() {
@@ -13,9 +13,7 @@ export default function Footer() {
     };
 
     return (
-        <footer className="relative bg-white overflow-hidden">
-            {/* Background pattern - same as Hero section */}
-
+        <footer id="footer" className="relative bg-white overflow-hidden">
             
             {/* Top wave divider */}
             <div className="absolute top-0 left-0 right-0 h-16 z-10">
@@ -35,17 +33,14 @@ export default function Footer() {
                             Digital marketing specialist focused on creating impactful campaigns and strategies to drive brand growth and audience engagement.
                         </p>
                         <div className="flex space-x-4 mt-4">
-                            <Link href="#" className="bg-gray-100 hover:bg-emerald-100 p-2 rounded-full transition-colors duration-300">
+                            <Link href="https://linkedin.com/in/adeniranadetunji" target="_blank"  className="bg-gray-100 hover:bg-emerald-100 p-2 rounded-full transition-colors duration-300">
                                 <Linkedin size={18} className="text-gray-700 hover:text-emerald-600" />
                             </Link>
-                            <Link href="#" className="bg-gray-100 hover:bg-emerald-100 p-2 rounded-full transition-colors duration-300">
+                            <Link href="https://x.com/adeniranifeol17" target="_blank" className="bg-gray-100 hover:bg-emerald-100 p-2 rounded-full transition-colors duration-300">
                                 <Twitter size={18} className="text-gray-700 hover:text-emerald-600" />
                             </Link>
-                            <Link href="#" className="bg-gray-100 hover:bg-emerald-100 p-2 rounded-full transition-colors duration-300">
-                                <Instagram size={18} className="text-gray-700 hover:text-emerald-600" />
-                            </Link>
-                            <Link href="#" className="bg-gray-100 hover:bg-emerald-100 p-2 rounded-full transition-colors duration-300">
-                                <Github size={18} className="text-gray-700 hover:text-emerald-600" />
+                            <Link href="https://wa.me/2349029159174" target="_blank" className="bg-gray-100 hover:bg-emerald-100 p-2 rounded-full transition-colors duration-300">
+                                <PhoneCallIcon size={18} className="text-gray-700 hover:text-emerald-600" />
                             </Link>
                         </div>
                     </div>
@@ -55,10 +50,10 @@ export default function Footer() {
                         <h3 className="text-xl font-bold text-gray-900">Quick Links</h3>
                         <div className="h-1 w-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full mb-4"></div>
                         <nav className="flex flex-col space-y-3">
-                            <Link href="#" className="text-gray-600 hover:text-emerald-600 transition-colors duration-300">About Me</Link>
+                            <Link href="#about-me" className="text-gray-600 hover:text-emerald-600 transition-colors duration-300">About Me</Link>
                             <Link href="#" className="text-gray-600 hover:text-emerald-600 transition-colors duration-300">Portfolio</Link>
                             <Link href="#" className="text-gray-600 hover:text-emerald-600 transition-colors duration-300">Resume</Link>
-                            <Link href="#" className="text-gray-600 hover:text-emerald-600 transition-colors duration-300">Contact</Link>
+                            <Link href="#footer" className="text-gray-600 hover:text-emerald-600 transition-colors duration-300">Contact</Link>
                         </nav>
                     </div>
 
@@ -79,11 +74,11 @@ export default function Footer() {
                         <h3 className="text-xl font-bold text-gray-900">Contact</h3>
                         <div className="h-1 w-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full mb-4"></div>
                         <div className="flex flex-col space-y-3">
-                            <a href="mailto:contact@example.com" className="flex items-center text-gray-600 hover:text-emerald-600 transition-colors duration-300">
-                                <Mail size={16} className="mr-2" /> contact@example.com
+                            <a href="mailto:adeniranifeoluwa06@gmail.com" className="flex items-center text-gray-600 hover:text-emerald-600 transition-colors duration-300">
+                                <Mail size={16} className="mr-2" /> adeniranifeoluwa06@gmail.com
                             </a>
-                            <a href="tel:+1234567890" className="flex items-center text-gray-600 hover:text-emerald-600 transition-colors duration-300">
-                                <Phone size={16} className="mr-2" /> +123 456 7890
+                            <a href="tel+2349029159174" className="flex items-center text-gray-600 hover:text-emerald-600 transition-colors duration-300">
+                                <Phone size={16} className="mr-2" /> +234 902 915 9174
                             </a>
                             <address className="text-gray-600 not-italic">
                                 Lagos, Nigeria
@@ -101,14 +96,14 @@ export default function Footer() {
                         &copy; {new Date().getFullYear()} Adetunji Adeniran. All rights reserved.
                     </div>
                     <div className="text-gray-600 text-sm">
-                        Designed and developed by <Link className="text-emerald-600 hover:underline" href="https://adeyemiabiade.tech"> Adeyemi Abiade </Link>
+                        Designed and developed by <Link className="text-emerald-600 hover:underline" href="https://adeyemiabiade.tech" target="_blank"> Adeyemi Abiade </Link>
                     </div>
                 </div>
 
                 {/* Scroll to top button */}
                 <button 
                     onClick={scrollToTop}
-                    className="fixed right-6 bottom-6 bg-gradient-to-r from-emerald-500 to-teal-600 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-50"
+                    className="fixed right-6 bottom-6 cursor-pointer bg-gradient-to-r from-emerald-500 to-teal-600 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-50"
                 >
                     <ArrowUp size={24} className="text-white" />
                 </button>
