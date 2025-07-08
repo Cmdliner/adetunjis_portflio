@@ -96,7 +96,7 @@ export default function Footer() {
                         &copy; {new Date().getFullYear()} Adetunji Adeniran. All rights reserved.
                     </div>
                     <div className="text-gray-600 text-sm">
-                        Designed and developed by <Link className="text-emerald-600 hover:underline" href="https://adeyemiabiade.tech" target="_blank"> Adeyemi Abiade </Link>
+                        Designed and developed by <Link className="text-emerald-600 hover:underline" href="https://adeyemiabiade.me" target="_blank"> Adeyemi Abiade </Link>
                     </div>
                 </div>
 
